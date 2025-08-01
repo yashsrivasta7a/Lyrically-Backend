@@ -40,7 +40,9 @@ app.get("/lyrics", async (req, res) => {
       {
         headers: {
           Authorization: `Bearer ${GENIUS_ACCESS_TOKEN}`,
+          "User-Agent": "RenderApp/1.0"
         },
+        timeout: 10000,
       }
     );
 
